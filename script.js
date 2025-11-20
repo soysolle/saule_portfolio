@@ -1258,7 +1258,7 @@ function setupGallery(scopeEl){
 
 function openDrawer(idx, type){
   const PSET = type === 'lead'
-    ? LEAD_CARDS
+    ? (LEAD_CARDS_BY_LANG[LANG] || LEAD_CARDS_BY_LANG.en)
     : (PROJECTS_BY_LANG[LANG] || PROJECTS_BY_LANG.en);
   const P = PSET[idx];
   if(!P) return;
