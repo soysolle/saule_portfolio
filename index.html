@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saule Narynbay· PM Portfolio</title>
+  <meta name="description" content="Project Manager portfolio: case studies, process, and results." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="curtain" aria-hidden="true"></div>
+
+  <header class="site">
+    <div class="wrap nav">
+      <div class="logo"><span class="dot"></span><span data-i18n="brand">Saule Narynbay · PM</span></div>
+      <nav>
+        <a href="#home" data-link data-i18n="nav.home">Home</a>
+        <a href="#projects" data-link data-i18n="nav.projects">Projects</a>
+        <a href="#leadership" data-link data-i18n="nav.leadership">Leadership</a>
+      </nav>
+      <div class="lang" id="lang">
+        <button id="langBtn" aria-expanded="false">EN ▾</button>
+        <ul id="langMenu">
+          <li data-lang="en">English</li>
+          <li data-lang="ko">한국어</li>
+          <li data-lang="es">Español</li>
+          <li data-lang="kk">Қазақ</li>
+          <li data-lang="ru">Русский</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="view active" aria-label="Home">
+      <div class="wrap hero">
+        <div class="leftCol"><div class="glass" id="photoCard"></div></div>
+
+        <div class="heroMain">
+          <div class="tag" data-i18n="hero.tag">Project Manager · Product-minded · Multilingual</div>
+          <h1>
+            <span data-i18n="hero.h1_a">Turning ambiguity into</span>
+            <span style="background:linear-gradient(120deg,var(--brand),var(--brand-2)); -webkit-background-clip:text; background-clip:text; color:transparent" data-i18n="hero.h1_b">clarity</span>
+            <span data-i18n="hero.h1_c">& shipping outcomes.</span>
+          </h1>
+
+          <div class="glass miniRoles" id="rolesMini"></div>
+
+          <div class="ctaRow">
+      <a class="btn brand" href="#projects" data-link data-i18n="cta.viewProjects">View Projects</a>
+      <a class="btn" href="resume.pdf" download data-i18n="cta.resume">Download résumé</a>
+      <a class="btn" href="https://github.com/soysolle" target="_blank" rel="noopener" data-i18n="cta.github">
+    GitHub
+  </a>
+</div>
+
+        </div>
+      </div>
+
+      <a class="btn brand projects-pill" id="projectsPill" href="#projects" data-link data-i18n="cta.openProjects">Open Projects</a>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="view" aria-label="Projects">
+      <div class="wrap section">
+        <h2 data-i18n="projects.title">Projects</h2>
+        <p class="sub" data-i18n="projects.sub">Tap a box — projects will pop out with details.</p>
+        <div class="cards" id="cards"></div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP & TEACHING -->
+  <section id="leadership" class="view" aria-label="Leadership">
+  <div class="wrap section">
+    <h2 data-i18n="lead.title">Leadership</h2>
+    <p class="sub" data-i18n="lead.sub">
+      Community roles that show ownership, organization, and communication skills.
+    </p>
+    <!-- THIS DIV IS IMPORTANT -->
+    <div class="cards" id="leadCards"></div>
+  </div>
+</section>
+
+  </main>
+
+  <!-- DRAWER -->
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <aside class="drawer" aria-labelledby="drawerTitle">
+      <header>
+        <strong id="drawerTitle">Project Title</strong>
+        <a class="btn" id="closeDrawer" href="#" data-i18n="drawer.close">Close</a>
+      </header>
+      <div class="content" id="drawerContent"></div>
+    </aside>
+  </div>
+
+  <footer class="site"><div class="wrap">© <span id="y"></span> <span data-i18n="brand">Saule Narynbay · PM</span></div></footer>
+
+  <noscript>
+    <style>.view{display:block}.projects-pill{display:none}</style>
+    JavaScript is required to view project details and language switching.
+  </noscript>
+</body>
+</html>
